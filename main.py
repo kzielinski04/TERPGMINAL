@@ -1,5 +1,15 @@
 from os import system
 
+class Warrior:
+    health = 100
+    attack = 50
+    speed = 25
+
+class Wizard:
+    health = 50
+    attack = 100
+    speed = 30
+
 def menu():
     print("Welcome to the TERPGMINAL!")
     print("1 - New game")
@@ -28,8 +38,8 @@ def new_game():
     choice = input("Choose your class: ")
     match choice:
         case '1':
-            character_class = "Warrior"
+            character_class = Warrior
         case '2':
-            character_class = "Wizard"
+            character_class = Wizard
     character_data.write(character_class + ';')
-menu()
+#menu()
