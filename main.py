@@ -1,14 +1,21 @@
 from os import system
 
 class Warrior:
+    name = "Warrior"
     health = 100
     attack = 50
     speed = 25
+    def info():
+        print(f"Health: {Warrior.health}\nAttack: {Warrior.attack}\n Speed: {Warrior.speed}")
 
 class Wizard:
+    name = "Wizard"
     health = 50
     attack = 100
     speed = 30
+    def info():
+        print(f"Health: {Wizard.health}\nAttack: {Wizard.attack}\nSpeed: {Wizard.speed}")
+
 
 def menu():
     print("Welcome to the TERPGMINAL!")
@@ -41,5 +48,9 @@ def new_game():
             character_class = Warrior
         case '2':
             character_class = Wizard
-    character_data.write(character_class + ';')
-#menu()
+    character_data.write(character_class.name + ';')
+    system('clear')
+    main()
+
+def main():
+menu()
